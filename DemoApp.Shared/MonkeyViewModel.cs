@@ -17,20 +17,7 @@ namespace DemoApp.Shared
 
         public async Task GetMonkeys()
         {
-            try
-            {
-                var client = new HttpClient();
-                var json = await client.GetStringAsync("https://montemagno.com/monkeys.json");
 
-                var monkeys = Monkey.FromJson(json);
-                foreach (var monkey in monkeys)
-                    Monkeys.Add(monkey);
-            }
-            catch (Exception ex)
-            {
-                //write a cool unit test NEVER
-                Console.WriteLine(ex);
-            }
         }
     }
 }

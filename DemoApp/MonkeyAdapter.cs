@@ -53,9 +53,11 @@ namespace DemoApp
             // Replace the contents of the view with that element
             var holder = viewHolder as MonkeyAdapterViewHolder;
 
-            holder.TextViewName.Text = monkey.Name;
-            holder.TextViewCity.Text = monkey.Location;
-            Glide.With(activity).Load(monkey.Image.OriginalString).Into(holder.ImageView);
+            //TODO: bind up UI
+
+            //holder.TextViewName.Text = monkey.Name;
+            //holder.TextViewCity.Text = monkey.Location;
+            //Glide.With(activity).Load(monkey.Image.OriginalString).Into(holder.ImageView);
         }
 
         public override int ItemCount => viewModel.Monkeys.Count;

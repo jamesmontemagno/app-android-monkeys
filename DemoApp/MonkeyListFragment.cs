@@ -23,16 +23,7 @@ namespace DemoApp
 
             var refreshButton = view.FindViewById<Button>(Resource.Id.button_refresh);
 
-            //add click handler
-
-            refreshButton.Click += async (sender, args) =>
-            {
-                refreshButton.Enabled = false;
-                await viewModel.GetMonkeys();
-                refreshButton.Enabled = true;
-            };
-
-           
+            //TODO: add click handler           
 
             var adapter = new MonkeyAdapter(viewModel, activity);
             recyclerView.SetAdapter(adapter);
